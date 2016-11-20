@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/semantic.min.css"></link>
+
+        <!--
+          Notice the use of %PUBLIC_URL% in the tag above.
+          It will be replaced with the URL of the `public` folder during the build.
+          Only files inside the `public` folder can be referenced from the HTML.
+
+          Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+          work correctly both with client-side routing and a non-root public URL.
+          Learn how to configure a non-root public URL by running `npm run build`.
+        -->
+        <title>Skynet</title>
+
+        <link rel="stylesheet" type="text/css" href="jquery.fullpage.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<!--        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>-->
+        <script type="text/javascript" src="jquery.fullpage.js"></script>
+    
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#fullpage').fullpage();
+                var images = ["main_image.JPG", "laptop.JPG", "books-monsters.JPG", "shell.JPG", "tech.JPG", "ground.JPG", "iceland-edge.JPG"];
+                nexPic(0);
+                
+                function nexPic(i) {
+                    $('.bernContainer').fadeOut('slow',function(){
+                        $(".slide-bg").css("background-image", "url(./img/"+images[i]+")");
+                        $(this).fadeIn('slow');
+                        setTimeout(function(){nexPic((i+1)%images.length);}, 10000);
+                    });
+                }
+            });
+        </script>
+
+        </head>
+    <body>
+<!--
+        <div class="bernContainer">
+            <div class="slide-bg grain"></div>
+        </div>
+-->
+            
+        <div id="fullpage">
+            <div class="section active" id="intro" data-anchor="sl-intro"></div>
+            <div class="section" id="portfolio" data-anchor="sl-work"><h1></div>
+            <div class="section" id="about" data-anchor="sl-about"></div>
+            <div class="section" id="contact" data-anchor="sl-contact"></div>
+        </div>
+            
+            <footer>&copy; 2016 Skyler Belser</footer>
+    </body>
+</html>

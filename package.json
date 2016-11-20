@@ -1,17 +1,19 @@
 {
-  "name": "skynet",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "webpack-dev-server --hot"
+  "name": "Skynet",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "react-scripts": "0.7.0"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "react": "^15.4.0",
     "react-dom": "^15.4.0",
-    "webpack": "^1.13.3",
-    "webpack-dev-server": "^1.16.2"
+    "semantic-ui-react": "^0.61.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   }
 }

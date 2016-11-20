@@ -1,0 +1,149 @@
+@import url(http://fonts.googleapis.com/css?family=Playfair+Display:700);
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans);
+@import url(https://fonts.googleapis.com/css?family=Ravi+Prakash);
+@import url(https://fonts.googleapis.com/css?family=Gloria+Hallelujah);
+@import url(https://fonts.googleapis.com/css?family=Gravitas+One);
+
+/*
+@font-face {
+    font-family: reg-font;
+    src: url("/NotoSans-Regular.ttf");
+}
+*/
+
+* { 
+    font-family: 'Noto Sans';
+    transition: .2s;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans';
+    background-color: #212121;
+}
+
+.slide-bg {
+      transition: opacity 1s ease-in-out;
+  -webkit-animation: kenburns 120s infinite linear;
+  animation: kenburns 120s infinite linear;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+/*  background-image: url('https://images2.alphacoders.com/117/117712.jpg');*/
+  background-size: cover;
+/*    position: absolute;*/
+}
+@keyframes kenburns {
+  0% {
+    transform: scale(1) rotate(0deg)
+  }
+  50% {
+    transform: scale(1.4)
+  }
+  100% {
+    transform: scale(1) rotate(0deg)
+  }
+}
+.grain:after {
+  content: '';
+  width: 110%;
+  height: 110%;
+         background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+/*  background: url(http://i1022.photobucket.com/albums/af345/boldpaste2/CTRLines.png) repeat center center;*/
+/*    background: url(http://i1022.photobucket.com/albums/af345/boldpaste2/CTRLines.png);*/
+/*      background-size: contain;*/
+  -webkit-animation: old .5s 0s steps(1) infinite;
+  animation: old .5s 0s steps(1) infinite;
+  position: absolute;
+  top: -5%;
+  left: -5%;
+  display: block;
+}
+@keyframes grain {
+  0%, 100% {
+    transform: translate(0, 0, 0)
+  }
+  10% {
+    transform: translate(-1%, -1%)
+  }
+  20% {
+    transform: translate(1%, 1%)
+  }
+  30% {
+    transform: translate(-2%, -2%)
+  }
+  40% {
+    transform: translate(3%, 3%)
+  }
+  50% {
+    transform: translate(-3%, -3%)
+  }
+  60% {
+    transform: translate(4%, 4%)
+  }
+  70% {
+    transform: translate(-4%, -4%)
+  }
+  80% {
+    transform: translate(2%, 2%)
+  }
+  90% {
+    transform: translate(-2%, -2%)
+  }
+}
+
+@keyframes old {
+  0%, 100% {
+    transform: translate(0, 0, 0)
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translate(-1%, 0%)
+  }
+  20%, 40%, 60%, 80% {
+    transform: translate(0%, 0%)
+  }
+}
+
+.big {
+    animation: wiggle 2.5s infinite;
+}
+
+a > * {
+    color: #f1f1f1;
+    text-align: center;
+    font-size: 3em;
+}
+
+a > * :hover {
+    color: #D50000;
+    animation: none;
+    transition-timing-function: ease-in;
+    transition: .3s;
+    transform: scale(2);
+}
+
+@keyframes wiggle {
+    0% { transform: rotate(10deg); }
+    10% { transform: rotate(0deg); }
+   80% { transform: rotate(0deg); }
+   85% { transform: rotate(10deg); }
+   95% { transform: rotate(-10deg); }
+  100% { transform: rotate(10deg); }
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 1em;
+    color: rgba(256,256,256,.5);
+}
+
+.bernContainer {
+    background-color: red;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+}
